@@ -9,9 +9,7 @@ export default function News() {
   const [isLoading, setLoading] = useState(false);
   const fetch_News = () => {
     setLoading(true);
-    fetch(
-      `https://newsapi.org/v2/top-headlines?country=in&apiKey=4f0ed34c2436488fbea43a2b2255489e&category=entertainment`
-    )
+    fetch(`https://newsapi.org/v2/top-headlines?country=in&apiKey=4f0ed34c2436488fbea43a2b2255489e&category=entertainment`)
       .then(res => res.json())
       .then(data => {
         console.log(data);
@@ -46,7 +44,6 @@ export default function News() {
           ))}
         </div>
       </div>
-      <div className=""></div>
     </div>
   );
 }
